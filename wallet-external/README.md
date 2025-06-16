@@ -25,10 +25,10 @@ $ ./wallet-external-api <operationId> -h
 ./wallet-external-api --host http://<hostname>:<port> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
 
 # Make GET request using arbitrary curl options (must be passed before <operationId>) to an SSL service using username:password
-wallet-external-api -k -sS --tlsv1.2 --host https://<hostname> -u <user>:<password> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
+./wallet-external-api -k -sS --tlsv1.2 --host https://<hostname> -u <user>:<password> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
 
 # Make POST request
-$ echo '<body_content>' | wallet-external-api --host <hostname> --content-type json <operationId> -
+$ echo '<body_content>' | ./wallet-external-api --host <hostname> --content-type json <operationId> -
 
 # Make POST request with simple JSON content, e.g.:
 # {
@@ -36,13 +36,13 @@ $ echo '<body_content>' | wallet-external-api --host <hostname> --content-type j
 #   "key2": "value2",
 #   "key3": 23
 # }
-$ echo '<body_content>' | wallet-external-api --host <hostname> --content-type json <operationId> key1==value1 key2=value2 key3:=23 -
+$ echo '<body_content>' | ./wallet-external-api --host <hostname> --content-type json <operationId> key1==value1 key2=value2 key3:=23 -
 
 # Make POST request with form data
-$ wallet-external-api --host <hostname> <operationId> key1:=value1 key2:=value2 key3:=23
+$ ./wallet-external-api --host <hostname> <operationId> key1:=value1 key2:=value2 key3:=23
 
 # Preview the cURL command without actually executing it
-$ wallet-external-api --host http://<hostname>:<port> --dry-run <operationid>
+$ ./wallet-external-api --host http://<hostname>:<port> --dry-run <operationid>
 
 ```
 
@@ -69,6 +69,7 @@ The generated bash-completion script can be either directly loaded to the curren
 
 ```shell
 source wallet-external-api.bash-completion
+ln wallet-external-api -t /usr/local/bin/
 ```
 
 Alternatively, the script can be copied to the `/etc/bash-completion.d` (or on OSX with Homebrew to `/usr/local/etc/bash-completion.d`):
