@@ -13,13 +13,13 @@ The script uses cURL underneath for making all REST calls.
 chmod u+x ./internal-wallet-api.sh
 
 # Print the list of operations available on the service
-./internal-wallet-api.shinternal-wallet-api.sh -h
+./internal-wallet-api.sh -h
 
 # Print the service description
-./internal-wallet-api.shinternal-wallet-api.sh --about
+./internal-wallet-api.sh --about
 
 # Print detailed information about specific operation
-./internal-wallet-api.shinternal-wallet-api.sh <operationId> -h
+./internal-wallet-api.sh <operationId> -h
 
 # Make GET request
 ./internal-wallet-api.sh --host http://<hostname>:<port> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
