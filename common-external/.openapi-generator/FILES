@@ -1,0 +1,16 @@
+.openapi-generator-ignore
+Dockerfile
+README.md
+_client.sh
+client.sh
+client.sh.bash-completion
+docs/CommonApi.md
+docs/Contract.md
+docs/ErrorResponse.md
+docs/FailureStatusResponse.md
+docs/NodeStatus.md
+docs/NotInitialized.md
+docs/NotInitializedStatusResponse.md
+docs/Status.md
+docs/SuccessStatusResponse.md
+docs/Version.md

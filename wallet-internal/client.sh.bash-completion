@@ -1,0 +1,313 @@
+#  completion                               -*- shell-script -*-
+
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# !
+# ! Note:
+# !
+# ! THIS SCRIPT HAS BEEN AUTOMATICALLY GENERATED USING
+# ! openapi-generator (https://openapi-generator.tech)
+# ! FROM OPENAPI SPECIFICATION IN JSON.
+# !
+# ! Generator version: 7.13.0
+# !
+# !
+# ! System wide installation:
+# !
+# ! $ sudo cp .bash-completion /etc/bash-completion.d/
+# !
+# !
+# ! User home installation (add this line to .bash_profile):
+# !
+# ! [ -r ~/.bash-completion ] && source ~/.bash-completion
+# !
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+declare -A mime_type_abbreviations
+# text/*
+mime_type_abbreviations["text"]="text/plain"
+mime_type_abbreviations["html"]="text/html"
+mime_type_abbreviations["md"]="text/x-markdown"
+mime_type_abbreviations["csv"]="text/csv"
+mime_type_abbreviations["css"]="text/css"
+mime_type_abbreviations["rtf"]="text/rtf"
+# application/*
+mime_type_abbreviations["json"]="application/json"
+mime_type_abbreviations["xml"]="application/xml"
+mime_type_abbreviations["yaml"]="application/yaml"
+mime_type_abbreviations["js"]="application/javascript"
+mime_type_abbreviations["bin"]="application/octet-stream"
+mime_type_abbreviations["rdf"]="application/rdf+xml"
+# image/*
+mime_type_abbreviations["jpg"]="image/jpeg"
+mime_type_abbreviations["png"]="image/png"
+mime_type_abbreviations["gif"]="image/gif"
+mime_type_abbreviations["bmp"]="image/bmp"
+mime_type_abbreviations["tiff"]="image/tiff"
+
+
+#
+# Check if this is OSX, if so defined custom init_completion
+#
+if [[ `uname` =~ "Darwin" ]]; then
+    __osx_init_completion()
+    {
+        COMPREPLY=()
+        _get_comp_words_by_ref cur prev words cword
+    }
+fi
+
+_()
+{
+    local cur
+    local prev
+    local words
+    local cword
+
+    # The reference of currently selected REST operation
+    local operation=""
+
+    # The list of available operation in the REST service
+    # It's modelled as an associative array for efficient key lookup
+    declare -A operations
+    operations["acceptAppPaymentRequest"]=1
+    operations["acceptSubscriptionRequest"]=1
+    operations["acceptTokenStandardTransfer"]=1
+    operations["acceptTransferOffer"]=1
+    operations["cancelFeaturedAppRights"]=1
+    operations["cancelSubscriptionRequest"]=1
+    operations["createTokenStandardTransfer"]=1
+    operations["createTransferPreapproval"]=1
+    operations["featureSupport"]=1
+    operations["getAppPaymentRequest"]=1
+    operations["getBalance"]=1
+    operations["getSubscriptionRequest"]=1
+    operations["list"]=1
+    operations["listAcceptedAppPayments"]=1
+    operations["listAcceptedTransferOffers"]=1
+    operations["listAppPaymentRequests"]=1
+    operations["listAppRewardCoupons"]=1
+    operations["listSubscriptionInitialPayments"]=1
+    operations["listSubscriptionRequests"]=1
+    operations["listSubscriptions"]=1
+    operations["listSvRewardCoupons"]=1
+    operations["listTokenStandardTransfers"]=1
+    operations["listTransactions"]=1
+    operations["listValidatorFaucetCoupons"]=1
+    operations["listValidatorLivenessActivityRecords"]=1
+    operations["listValidatorRewardCoupons"]=1
+    operations["rejectAppPaymentRequest"]=1
+    operations["rejectSubscriptionRequest"]=1
+    operations["rejectTokenStandardTransfer"]=1
+    operations["rejectTransferOffer"]=1
+    operations["selfGrantFeatureAppRight"]=1
+    operations["tap"]=1
+    operations["transferPreapprovalSend"]=1
+    operations["userStatus"]=1
+    operations["withdrawTokenStandardTransfer"]=1
+    operations["withdrawTransferOffer"]=1
+
+    # An associative array of operations to their parameters
+    # Only include path, query and header parameters
+    declare -A operation_parameters
+    operation_parameters["acceptAppPaymentRequest"]="contract_id= "
+    operation_parameters["acceptSubscriptionRequest"]="contract_id= "
+    operation_parameters["acceptTokenStandardTransfer"]="contract_id= "
+    operation_parameters["acceptTransferOffer"]="contract_id= "
+    operation_parameters["cancelFeaturedAppRights"]=""
+    operation_parameters["cancelSubscriptionRequest"]="contract_id= "
+    operation_parameters["createTokenStandardTransfer"]=""
+    operation_parameters["createTransferPreapproval"]=""
+    operation_parameters["featureSupport"]=""
+    operation_parameters["getAppPaymentRequest"]="contract_id= "
+    operation_parameters["getBalance"]=""
+    operation_parameters["getSubscriptionRequest"]="contract_id= "
+    operation_parameters["list"]=""
+    operation_parameters["listAcceptedAppPayments"]=""
+    operation_parameters["listAcceptedTransferOffers"]=""
+    operation_parameters["listAppPaymentRequests"]=""
+    operation_parameters["listAppRewardCoupons"]=""
+    operation_parameters["listSubscriptionInitialPayments"]=""
+    operation_parameters["listSubscriptionRequests"]=""
+    operation_parameters["listSubscriptions"]=""
+    operation_parameters["listSvRewardCoupons"]=""
+    operation_parameters["listTokenStandardTransfers"]=""
+    operation_parameters["listTransactions"]=""
+    operation_parameters["listValidatorFaucetCoupons"]=""
+    operation_parameters["listValidatorLivenessActivityRecords"]=""
+    operation_parameters["listValidatorRewardCoupons"]=""
+    operation_parameters["rejectAppPaymentRequest"]="contract_id= "
+    operation_parameters["rejectSubscriptionRequest"]="contract_id= "
+    operation_parameters["rejectTokenStandardTransfer"]="contract_id= "
+    operation_parameters["rejectTransferOffer"]="contract_id= "
+    operation_parameters["selfGrantFeatureAppRight"]=""
+    operation_parameters["tap"]=""
+    operation_parameters["transferPreapprovalSend"]=""
+    operation_parameters["userStatus"]=""
+    operation_parameters["withdrawTokenStandardTransfer"]="contract_id= "
+    operation_parameters["withdrawTransferOffer"]="contract_id= "
+
+    # An associative array of possible values for enum parameters
+    declare -A operation_parameters_enum_values
+
+    #
+    # Check if this is OSX and use special __osx_init_completion function
+    #
+    if [[ `uname` =~ "Darwin" ]]; then
+        __osx_init_completion || return
+    else
+        _init_completion -s || return
+    fi
+
+
+    # Check if operation is already in the command line provided
+    for word in "${words[@]}"; do
+        if [[ -n $word && ${operations[$word]} ]]; then
+            operation="${word}"
+        fi
+    done
+
+    if [[ -z $operation ]]; then
+        case $prev in
+            --ciphers|--connect-timeout|-C|--continue-at|-F|--form|--form-string|\
+            --ftp-account|--ftp-alternative-to-user|-P|--ftp-port|-H|--header|-h|\
+            --help|--hostpubmd5|--keepalive-time|--krb|--limit-rate|--local-port|\
+            --mail-from|--mail-rcpt|--max-filesize|--max-redirs|-m|--max-time|\
+            --pass|--proto|--proto-redir|--proxy-user|--proxy1.0|-Q|--quote|-r|\
+            --range|-X|--request|--retry|--retry-delay|--retry-max-time|\
+            --socks5-gssapi-service|-t|--telnet-option|--tftp-blksize|-z|\
+            --time-cond|--url|-u|--user|-A|--user-agent|-V|--version|-w|\
+            --write-out|--resolve|--tlsuser|--tlspassword|--about)
+                return
+                ;;
+            -K|--config|-b|--cookie|-c|--cookie-jar|-D|--dump-header|--egd-file|\
+            --key|--libcurl|-o|--output|--random-file|-T|--upload-file|--trace|\
+            --trace-ascii|--netrc-file)
+                _filedir
+                return
+                ;;
+            --cacert|-E|--cert)
+                _filedir '@(c?(e)rt|cer|pem|der)'
+                return
+                ;;
+            --capath)
+                _filedir -d
+                return
+                ;;
+            --cert-type|--key-type)
+                COMPREPLY=( $( compgen -W 'DER PEM ENG' -- "$cur" ) )
+                return
+                ;;
+            --crlfile)
+                _filedir crl
+                return
+                ;;
+            -d|--data|--data-ascii|--data-binary|--data-urlencode)
+                if [[ $cur == \@* ]]; then
+                    cur=${cur:1}
+                    _filedir
+                    COMPREPLY=( "${COMPREPLY[@]/#/@}" )
+                fi
+                return
+                ;;
+            --delegation)
+                COMPREPLY=( $( compgen -W 'none policy always' -- "$cur" ) )
+                return
+                ;;
+            --engine)
+                COMPREPLY=( $( compgen -W 'list' -- "$cur" ) )
+                return
+                ;;
+            --ftp-method)
+                COMPREPLY=( $( compgen -W 'multicwd nocwd singlecwd' -- "$cur" ) )
+                return
+                ;;
+            --ftp-ssl-ccc-mode)
+                COMPREPLY=( $( compgen -W 'active passive' -- "$cur" ) )
+                return
+                ;;
+            --interface)
+                _available_interfaces -a
+                return
+                ;;
+            -x|--proxy|--socks4|--socks4a|--socks5|--socks5-hostname)
+                _known_hosts_real
+                return
+                ;;
+            --pubkey)
+                _filedir pub
+                return
+                ;;
+            --stderr)
+                COMPREPLY=( $( compgen -W '-' -- "$cur" ) )
+                _filedir
+                return
+                ;;
+            --tlsauthtype)
+                COMPREPLY=( $( compgen -W 'SRP' -- "$cur" ) )
+                return
+                ;;
+            --host)
+                COMPREPLY=( $( compgen -W 'http:// https://' -- "$cur" ) )
+                return
+                ;;
+            -ct|--content-type|-ac|--accept)
+                COMPREPLY=( $( compgen -W '${!mime_type_abbreviations[*]}' -- "$cur" ) )
+                return
+                ;;
+        esac
+    fi
+
+    #
+    # Complete the server address based on ~/.ssh/known_hosts
+    # and ~/.ssh/config
+    #
+    local prefix=${COMP_WORDS[COMP_CWORD-2]}
+    local colon=${COMP_WORDS[COMP_CWORD-1]}
+    if [[ "$colon" == ":" && ( $prefix == "https" || $prefix == "http" ) ]]; then
+        COMPREPLY=()
+        local comp_ssh_hosts=`[[ -f ~/.ssh/known_hosts ]] && \
+                              ( cat ~/.ssh/known_hosts | \
+                              grep '^[a-zA-Z0-9]' | \
+                              cut -f 1 -d ' ' | \
+                              sed -e s/,.*//g | \
+                              grep -v ^# | \
+                              uniq | \
+                              grep -v "\[" ) ;
+                              [[ -f ~/.ssh/config ]] && \
+                              ( cat ~/.ssh/config | \
+                              grep "^Host " | \
+                              awk '{print $2}' )`
+        COMPREPLY=( $( compgen -P '//' -W '${comp_ssh_hosts}' -- "${cur:2}") )
+        return
+    fi
+
+    #
+    # Complete the  and cURL's arguments
+    #
+    if [[ $cur == -* ]]; then
+        COMPREPLY=( $( compgen -W '$(_parse_help curl) $(_parse_help $1)' -- "$cur" ) )
+        return
+    fi
+
+    #
+    # If the argument starts with a letter this could be either an operation
+    # or an operation parameter
+    # When $cur is empty, suggest the list of operations by default
+    #
+    if [[ $cur =~ ^[A-Za-z_0-9]* ]]; then
+        # If operation has not been yet selected, suggest the list of operations
+        # otherwise suggest arguments of this operation as declared in the
+        # OpenAPI specification
+        if [[ -z $operation ]]; then
+            COMPREPLY=( $(compgen -W '${!operations[*]}' -- ${cur}) )
+        else
+            COMPREPLY=( $(compgen -W '${operation_parameters[$operation]}' -- ${cur}) )
+            compopt -o nospace
+        fi
+        return
+    fi
+
+} &&
+complete -F _ 
+
+# ex: ts=4 sw=4 et filetype=sh
