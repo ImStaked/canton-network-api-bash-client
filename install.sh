@@ -18,7 +18,7 @@ sudo ln scan/scan-api -t /usr/local/bin/
 
 # Setup bash completion for scan-proxy-api
 source scan-proxy/scan-proxy-api.bash-completion
-sudo ln scap-proxy/scap-proxy-api -t /usr/local/bin/
+sudo ln scan-proxy/scan-proxy-api -t /usr/local/bin/
 
 # Setup bash completion for validator-internal-api
 source validator-internal/validator-internal-api.bash-completion 
