@@ -40,7 +40,7 @@ immediate internal snapshot and delay in the next automatic snapshot.
 ### Example
 
 ```bash
- forceAcsSnapshotNow
+scan-api forceAcsSnapshotNow
 ```
 
 ### Parameters
@@ -72,7 +72,7 @@ Returns the ACS in creation date ascending order, paged, for a given migration i
 ### Example
 
 ```bash
- getAcsSnapshotAt
+scan-api getAcsSnapshotAt
 ```
 
 ### Parameters
@@ -108,7 +108,7 @@ the connected Splice network, in round number order, earliest-first.
 ### Example
 
 ```bash
- getClosedRounds
+scan-api getClosedRounds
 ```
 
 ### Parameters
@@ -141,7 +141,7 @@ This corresponds to the record time of the last transaction in the snapshot.
 ### Example
 
 ```bash
- getDateOfMostRecentSnapshotBefore  before=value  migration_id=value
+scan-api getDateOfMostRecentSnapshotBefore  before=value  migration_id=value
 ```
 
 ### Parameters
@@ -175,7 +175,7 @@ No authorization required
 ### Example
 
 ```bash
- getDsoInfo
+scan-api getDsoInfo
 ```
 
 ### Parameters
@@ -207,7 +207,7 @@ The party ID of the DSO for the Splice network connected by this Scan app.
 ### Example
 
 ```bash
- getDsoPartyId
+scan-api getDsoPartyId
 ```
 
 ### Parameters
@@ -239,7 +239,7 @@ Returns the active amulet contracts for a given migration id and record time, in
 ### Example
 
 ```bash
- getHoldingsStateAt
+scan-api getHoldingsStateAt
 ```
 
 ### Parameters
@@ -275,7 +275,7 @@ This is an aggregate of '/v0/holdings/state' by owner party ID with better perfo
 ### Example
 
 ```bash
- getHoldingsSummaryAt
+scan-api getHoldingsSummaryAt
 ```
 
 ### Parameters
@@ -311,7 +311,7 @@ ledger state at the time of the request.
 ### Example
 
 ```bash
- getMemberTrafficStatus domain_id=value member_id=value
+scan-api getMemberTrafficStatus domain_id=value member_id=value
 ```
 
 ### Parameters
@@ -350,7 +350,7 @@ polling/client-cache-update efficiency.
 ### Example
 
 ```bash
- getOpenAndIssuingMiningRounds
+scan-api getOpenAndIssuingMiningRounds
 ```
 
 ### Parameters
@@ -387,7 +387,7 @@ synchronizer and party, which is not currently supported.
 ### Example
 
 ```bash
- getPartyToParticipant domain_id=value party_id=value
+scan-api getPartyToParticipant domain_id=value party_id=value
 ```
 
 ### Parameters
@@ -427,7 +427,7 @@ order of events in the transaction, for this you should rely on the order of 'ro
 ### Example
 
 ```bash
- getUpdateByIdV2 update_id=value  daml_value_encoding=value
+scan-api getUpdateByIdV2 update_id=value  daml_value_encoding=value
 ```
 
 ### Parameters
@@ -472,7 +472,7 @@ and there may be two updates with the same record time but different migration i
 ### Example
 
 ```bash
- getUpdateHistoryV2
+scan-api getUpdateHistoryV2
 ```
 
 ### Parameters
@@ -509,7 +509,7 @@ time of the request.
 ### Example
 
 ```bash
- getValidatorFaucetsByValidator  Specify as:  validator_ids=value1 validator_ids=value2 validator_ids=...
+scan-api getValidatorFaucetsByValidator  Specify as:  validator_ids=value1 validator_ids=value2 validator_ids=...
 ```
 
 ### Parameters
@@ -546,7 +546,7 @@ Lists all non-expired ANS entries whose names are prefixed with the
 ### Example
 
 ```bash
- listAnsEntries  page_size=value  name_prefix=value
+scan-api listAnsEntries  page_size=value  name_prefix=value
 ```
 
 ### Parameters
@@ -586,7 +586,7 @@ connected synchronizer ID
 ### Example
 
 ```bash
- listDsoScans
+scan-api listDsoScans
 ```
 
 ### Parameters
@@ -619,7 +619,7 @@ connected synchronizer ID
 ### Example
 
 ```bash
- listDsoSequencers
+scan-api listDsoSequencers
 ```
 
 ### Parameters
@@ -652,7 +652,7 @@ sorted newest-first.
 ### Example
 
 ```bash
- listValidatorLicenses  after=value  limit=value
+scan-api listValidatorLicenses  after=value  limit=value
 ```
 
 ### Parameters
@@ -688,7 +688,7 @@ If present, the ANS entry named exactly 'name'.
 ### Example
 
 ```bash
- lookupAnsEntryByName name=value
+scan-api lookupAnsEntryByName name=value
 ```
 
 ### Parameters
@@ -724,7 +724,7 @@ If present, the first ANS entry for user 'party' according to
 ### Example
 
 ```bash
- lookupAnsEntryByParty party=value
+scan-api lookupAnsEntryByParty party=value
 ```
 
 ### Parameters

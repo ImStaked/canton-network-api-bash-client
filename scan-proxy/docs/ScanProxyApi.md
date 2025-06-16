@@ -25,7 +25,7 @@ Method | HTTP request | Description
 ### Example
 
 ```bash
- getAmuletRules
+scan-proxy-api getAmuletRules
 ```
 
 ### Parameters
@@ -55,7 +55,7 @@ No authorization required
 ### Example
 
 ```bash
- getAnsRules
+scan-proxy-api getAnsRules
 ```
 
 ### Parameters
@@ -88,7 +88,7 @@ No authorization required
 ### Example
 
 ```bash
- getDsoPartyId
+scan-proxy-api getDsoPartyId
 ```
 
 ### Parameters
@@ -118,7 +118,7 @@ No authorization required
 ### Example
 
 ```bash
- getOpenAndIssuingMiningRounds
+scan-proxy-api getOpenAndIssuingMiningRounds
 ```
 
 ### Parameters
@@ -148,7 +148,7 @@ No authorization required
 ### Example
 
 ```bash
- listAnsEntries  page_size=value  name_prefix=value
+scan-proxy-api listAnsEntries  page_size=value  name_prefix=value
 ```
 
 ### Parameters
@@ -182,7 +182,7 @@ No authorization required
 ### Example
 
 ```bash
- lookupAnsEntryByName name=value
+scan-proxy-api lookupAnsEntryByName name=value
 ```
 
 ### Parameters
@@ -215,7 +215,7 @@ No authorization required
 ### Example
 
 ```bash
- lookupAnsEntryByParty party=value
+scan-proxy-api lookupAnsEntryByParty party=value
 ```
 
 ### Parameters
@@ -248,7 +248,7 @@ No authorization required
 ### Example
 
 ```bash
- lookupFeaturedAppRight provider_party_id=value
+scan-proxy-api lookupFeaturedAppRight provider_party_id=value
 ```
 
 ### Parameters
@@ -281,7 +281,7 @@ No authorization required
 ### Example
 
 ```bash
- lookupTransferCommandCounterByParty party=value
+scan-proxy-api lookupTransferCommandCounterByParty party=value
 ```
 
 ### Parameters
@@ -316,7 +316,7 @@ Retrieve the status of all transfer commands of the given sender for the specifi
 ### Example
 
 ```bash
- lookupTransferCommandStatus  sender=value  nonce=value
+scan-proxy-api lookupTransferCommandStatus  sender=value  nonce=value
 ```
 
 ### Parameters
@@ -350,7 +350,7 @@ No authorization required
 ### Example
 
 ```bash
- lookupTransferPreapprovalByParty party=value
+scan-proxy-api lookupTransferPreapprovalByParty party=value
 ```
 
 ### Parameters

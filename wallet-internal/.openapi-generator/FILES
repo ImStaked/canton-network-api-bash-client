@@ -1,9 +1,6 @@
-.openapi-generator-ignore
 Dockerfile
 README.md
-_client.sh
-client.sh
-client.sh.bash-completion
+_wallet-internal-api
 docs/AcceptAppPaymentRequestRequest.md
 docs/AcceptAppPaymentRequestResponse.md
 docs/AcceptSubscriptionRequestResponse.md
@@ -55,3 +52,5 @@ docs/UnknownResponseItem.md
 docs/UserStatusResponse.md
 docs/WalletApi.md
 docs/WalletFeatureSupportResponse.md
+wallet-internal-api
+wallet-internal-api.bash-completion

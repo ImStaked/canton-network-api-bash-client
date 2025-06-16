@@ -1,9 +1,6 @@
-.openapi-generator-ignore
 Dockerfile
 README.md
-_client.sh
-client.sh
-client.sh.bash-completion
+_wallet-external-api
 docs/BaseGetBuyTrafficRequestStatusResponse.md
 docs/BaseGetTransferOfferStatusResponse.md
 docs/BuyTrafficRequestCompletedResponse.md
@@ -23,3 +20,5 @@ docs/TransferOfferCompletedResponse.md
 docs/TransferOfferCreatedResponse.md
 docs/TransferOfferFailedResponse.md
 docs/WalletApi.md
+wallet-external-api
+wallet-external-api.bash-completion

@@ -23,7 +23,7 @@ Once the subscription request is accepted, the DSO automation burns the payment 
 ### Example
 
 ```bash
- createAnsEntry
+ans-external-api createAnsEntry
 ```
 
 ### Parameters
@@ -59,7 +59,7 @@ Expired entries are not included in the response, even if the corresponding cont
 ### Example
 
 ```bash
- listAnsEntries
+ans-external-api listAnsEntries
 ```
 
 ### Parameters

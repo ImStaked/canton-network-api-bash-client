@@ -1,4 +1,4 @@
-#compdef 
+#compdef wallet-internal-api
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # !
@@ -15,7 +15,7 @@
 # !
 # ! Installation:
 # !
-# ! Copy the _ file to any directory under FPATH
+# ! Copy the _wallet-internal-api file to any directory under FPATH
 # ! environment variable (echo $FPATH)
 # !
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -1,9 +1,8 @@
-.openapi-generator-ignore
 Dockerfile
 README.md
-_client.sh
-client.sh
-client.sh.bash-completion
+_ans-external-api
+ans-external-api
+ans-external-api.bash-completion
 docs/AnsApi.md
 docs/AnsEntryResponse.md
 docs/CreateAnsEntryRequest.md

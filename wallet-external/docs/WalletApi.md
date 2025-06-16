@@ -21,7 +21,7 @@ Create a request to buy traffic. Note that this only creates the request to do s
 ### Example
 
 ```bash
- createBuyTrafficRequest
+wallet-external-api createBuyTrafficRequest
 ```
 
 ### Parameters
@@ -63,7 +63,7 @@ Direct transfers are a three-step process:
 ### Example
 
 ```bash
- createTransferOffer
+wallet-external-api createTransferOffer
 ```
 
 ### Parameters
@@ -98,7 +98,7 @@ Check the status of a buy traffic request with a given tracking id.
 ### Example
 
 ```bash
- getBuyTrafficRequestStatus tracking_id=value
+wallet-external-api getBuyTrafficRequestStatus tracking_id=value
 ```
 
 ### Parameters
@@ -133,7 +133,7 @@ Check the status of a transfer offer with a given tracking id.
 ### Example
 
 ```bash
- getTransferOfferStatus tracking_id=value
+wallet-external-api getTransferOfferStatus tracking_id=value
 ```
 
 ### Parameters
@@ -168,7 +168,7 @@ List all open transfer offers where the user is either sender or receiver.
 ### Example
 
 ```bash
- listTransferOffers
+wallet-external-api listTransferOffers
 ```
 
 ### Parameters

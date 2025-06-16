@@ -1,9 +1,6 @@
-.openapi-generator-ignore
 Dockerfile
 README.md
-_client.sh
-client.sh
-client.sh.bash-completion
+_validator-internal-api
 docs/CommonApi.md
 docs/Contract.md
 docs/ContractWithState.md
@@ -52,3 +49,5 @@ docs/SubmitTransferPreapprovalSendResponse.md
 docs/TopologyTx.md
 docs/ValidatorApi.md
 docs/ValidatorPublicApi.md
+validator-internal-api
+validator-internal-api.bash-completion

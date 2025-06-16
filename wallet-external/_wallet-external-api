@@ -1,4 +1,4 @@
-#compdef 
+#compdef wallet-external-api
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # !
@@ -15,7 +15,7 @@
 # !
 # ! Installation:
 # !
-# ! Copy the _ file to any directory under FPATH
+# ! Copy the _wallet-external-api file to any directory under FPATH
 # ! environment variable (echo $FPATH)
 # !
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -297,17 +297,11 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-            "getAmuletRules[]" \
-            "getAnsRules[]" \
-            "getDsoPartyId[]" \
-            "getOpenAndIssuingMiningRounds[]" \
-            "listAnsEntries[]" \
-            "lookupAnsEntryByName[]" \
-            "lookupAnsEntryByParty[]" \
-            "lookupFeaturedAppRight[]" \
-            "lookupTransferCommandCounterByParty[]" \
-            "lookupTransferCommandStatus[]" \
-            "lookupTransferPreapprovalByParty[]" \
+            "createBuyTrafficRequest[]" \
+            "createTransferOffer[]" \
+            "getBuyTrafficRequestStatus[]" \
+            "getTransferOfferStatus[]" \
+            "listTransferOffers[]" \
 
     _arguments "(--help)--help[Print information about operation]"
 
@@ -315,79 +309,36 @@ case $state in
     ;;
   args)
     case $line[1] in
-      getAmuletRules)
+      createBuyTrafficRequest)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getAnsRules)
+      createTransferOffer)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getDsoPartyId)
+      getBuyTrafficRequestStatus)
+        local -a _op_arguments
+        _op_arguments=(
+          "tracking_id=:[PATH] "
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getTransferOfferStatus)
+        local -a _op_arguments
+        _op_arguments=(
+          "tracking_id=:[PATH] "
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      listTransferOffers)
         local -a _op_arguments
         _op_arguments=(
                               )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getOpenAndIssuingMiningRounds)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      listAnsEntries)
-        local -a _op_arguments
-        _op_arguments=(
-                    "name_prefix=:[QUERY] "
-"page_size=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      lookupAnsEntryByName)
-        local -a _op_arguments
-        _op_arguments=(
-          "name=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      lookupAnsEntryByParty)
-        local -a _op_arguments
-        _op_arguments=(
-          "party=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      lookupFeaturedAppRight)
-        local -a _op_arguments
-        _op_arguments=(
-          "provider_party_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      lookupTransferCommandCounterByParty)
-        local -a _op_arguments
-        _op_arguments=(
-          "party=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      lookupTransferCommandStatus)
-        local -a _op_arguments
-        _op_arguments=(
-                    "sender=:[QUERY] "
-"nonce=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      lookupTransferPreapprovalByParty)
-        local -a _op_arguments
-        _op_arguments=(
-          "party=:[PATH] "
-                    )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
     esac

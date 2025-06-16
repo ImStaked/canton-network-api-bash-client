@@ -50,7 +50,7 @@ Method | HTTP request | Description
 ### Example
 
 ```bash
- acceptAppPaymentRequest contract_id=value
+wallet-internal-api acceptAppPaymentRequest contract_id=value
 ```
 
 ### Parameters
@@ -83,7 +83,7 @@ No authorization required
 ### Example
 
 ```bash
- acceptSubscriptionRequest contract_id=value
+wallet-internal-api acceptSubscriptionRequest contract_id=value
 ```
 
 ### Parameters
@@ -116,7 +116,7 @@ No authorization required
 ### Example
 
 ```bash
- acceptTokenStandardTransfer contract_id=value
+wallet-internal-api acceptTokenStandardTransfer contract_id=value
 ```
 
 ### Parameters
@@ -149,7 +149,7 @@ No authorization required
 ### Example
 
 ```bash
- acceptTransferOffer contract_id=value
+wallet-internal-api acceptTransferOffer contract_id=value
 ```
 
 ### Parameters
@@ -182,7 +182,7 @@ No authorization required
 ### Example
 
 ```bash
- cancelFeaturedAppRights
+wallet-internal-api cancelFeaturedAppRights
 ```
 
 ### Parameters
@@ -212,7 +212,7 @@ No authorization required
 ### Example
 
 ```bash
- cancelSubscriptionRequest contract_id=value
+wallet-internal-api cancelSubscriptionRequest contract_id=value
 ```
 
 ### Parameters
@@ -245,7 +245,7 @@ No authorization required
 ### Example
 
 ```bash
- createTokenStandardTransfer
+wallet-internal-api createTokenStandardTransfer
 ```
 
 ### Parameters
@@ -278,7 +278,7 @@ No authorization required
 ### Example
 
 ```bash
- createTransferPreapproval
+wallet-internal-api createTransferPreapproval
 ```
 
 ### Parameters
@@ -308,7 +308,7 @@ No authorization required
 ### Example
 
 ```bash
- featureSupport
+wallet-internal-api featureSupport
 ```
 
 ### Parameters
@@ -338,7 +338,7 @@ No authorization required
 ### Example
 
 ```bash
- getAppPaymentRequest contract_id=value
+wallet-internal-api getAppPaymentRequest contract_id=value
 ```
 
 ### Parameters
@@ -371,7 +371,7 @@ No authorization required
 ### Example
 
 ```bash
- getBalance
+wallet-internal-api getBalance
 ```
 
 ### Parameters
@@ -401,7 +401,7 @@ No authorization required
 ### Example
 
 ```bash
- getSubscriptionRequest contract_id=value
+wallet-internal-api getSubscriptionRequest contract_id=value
 ```
 
 ### Parameters
@@ -434,7 +434,7 @@ No authorization required
 ### Example
 
 ```bash
- list
+wallet-internal-api list
 ```
 
 ### Parameters
@@ -464,7 +464,7 @@ No authorization required
 ### Example
 
 ```bash
- listAcceptedAppPayments
+wallet-internal-api listAcceptedAppPayments
 ```
 
 ### Parameters
@@ -494,7 +494,7 @@ No authorization required
 ### Example
 
 ```bash
- listAcceptedTransferOffers
+wallet-internal-api listAcceptedTransferOffers
 ```
 
 ### Parameters
@@ -524,7 +524,7 @@ No authorization required
 ### Example
 
 ```bash
- listAppPaymentRequests
+wallet-internal-api listAppPaymentRequests
 ```
 
 ### Parameters
@@ -554,7 +554,7 @@ No authorization required
 ### Example
 
 ```bash
- listAppRewardCoupons
+wallet-internal-api listAppRewardCoupons
 ```
 
 ### Parameters
@@ -584,7 +584,7 @@ No authorization required
 ### Example
 
 ```bash
- listSubscriptionInitialPayments
+wallet-internal-api listSubscriptionInitialPayments
 ```
 
 ### Parameters
@@ -614,7 +614,7 @@ No authorization required
 ### Example
 
 ```bash
- listSubscriptionRequests
+wallet-internal-api listSubscriptionRequests
 ```
 
 ### Parameters
@@ -644,7 +644,7 @@ No authorization required
 ### Example
 
 ```bash
- listSubscriptions
+wallet-internal-api listSubscriptions
 ```
 
 ### Parameters
@@ -674,7 +674,7 @@ No authorization required
 ### Example
 
 ```bash
- listSvRewardCoupons
+wallet-internal-api listSvRewardCoupons
 ```
 
 ### Parameters
@@ -706,7 +706,7 @@ List all open transfers where the user is either sender or receiver.
 ### Example
 
 ```bash
- listTokenStandardTransfers
+wallet-internal-api listTokenStandardTransfers
 ```
 
 ### Parameters
@@ -736,7 +736,7 @@ No authorization required
 ### Example
 
 ```bash
- listTransactions
+wallet-internal-api listTransactions
 ```
 
 ### Parameters
@@ -769,7 +769,7 @@ No authorization required
 ### Example
 
 ```bash
- listValidatorFaucetCoupons
+wallet-internal-api listValidatorFaucetCoupons
 ```
 
 ### Parameters
@@ -799,7 +799,7 @@ No authorization required
 ### Example
 
 ```bash
- listValidatorLivenessActivityRecords
+wallet-internal-api listValidatorLivenessActivityRecords
 ```
 
 ### Parameters
@@ -829,7 +829,7 @@ No authorization required
 ### Example
 
 ```bash
- listValidatorRewardCoupons
+wallet-internal-api listValidatorRewardCoupons
 ```
 
 ### Parameters
@@ -859,7 +859,7 @@ No authorization required
 ### Example
 
 ```bash
- rejectAppPaymentRequest contract_id=value
+wallet-internal-api rejectAppPaymentRequest contract_id=value
 ```
 
 ### Parameters
@@ -892,7 +892,7 @@ No authorization required
 ### Example
 
 ```bash
- rejectSubscriptionRequest contract_id=value
+wallet-internal-api rejectSubscriptionRequest contract_id=value
 ```
 
 ### Parameters
@@ -925,7 +925,7 @@ No authorization required
 ### Example
 
 ```bash
- rejectTokenStandardTransfer contract_id=value
+wallet-internal-api rejectTokenStandardTransfer contract_id=value
 ```
 
 ### Parameters
@@ -958,7 +958,7 @@ No authorization required
 ### Example
 
 ```bash
- rejectTransferOffer contract_id=value
+wallet-internal-api rejectTransferOffer contract_id=value
 ```
 
 ### Parameters
@@ -991,7 +991,7 @@ No authorization required
 ### Example
 
 ```bash
- selfGrantFeatureAppRight
+wallet-internal-api selfGrantFeatureAppRight
 ```
 
 ### Parameters
@@ -1024,7 +1024,7 @@ No authorization required
 ### Example
 
 ```bash
- tap
+wallet-internal-api tap
 ```
 
 ### Parameters
@@ -1057,7 +1057,7 @@ No authorization required
 ### Example
 
 ```bash
- transferPreapprovalSend
+wallet-internal-api transferPreapprovalSend
 ```
 
 ### Parameters
@@ -1090,7 +1090,7 @@ No authorization required
 ### Example
 
 ```bash
- userStatus
+wallet-internal-api userStatus
 ```
 
 ### Parameters
@@ -1120,7 +1120,7 @@ No authorization required
 ### Example
 
 ```bash
- withdrawTokenStandardTransfer contract_id=value
+wallet-internal-api withdrawTokenStandardTransfer contract_id=value
 ```
 
 ### Parameters
@@ -1153,7 +1153,7 @@ No authorization required
 ### Example
 
 ```bash
- withdrawTransferOffer contract_id=value
+wallet-internal-api withdrawTransferOffer contract_id=value
 ```
 
 ### Parameters

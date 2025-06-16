@@ -37,7 +37,7 @@ Method | HTTP request | Description
 ### Example
 
 ```bash
- featureSupport
+scan-api featureSupport
 ```
 
 ### Parameters
@@ -67,7 +67,7 @@ No authorization required
 ### Example
 
 ```bash
- getAmuletRules
+scan-api getAmuletRules
 ```
 
 ### Parameters
@@ -100,7 +100,7 @@ No authorization required
 ### Example
 
 ```bash
- getAnsRules
+scan-api getAnsRules
 ```
 
 ### Parameters
@@ -135,7 +135,7 @@ Retrieve the status of the backfilling process.
 ### Example
 
 ```bash
- getBackfillingStatus
+scan-api getBackfillingStatus
 ```
 
 ### Parameters
@@ -165,7 +165,7 @@ No authorization required
 ### Example
 
 ```bash
- getExternalPartyAmuletRules
+scan-api getExternalPartyAmuletRules
 ```
 
 ### Parameters
@@ -200,7 +200,7 @@ List all previous synchronizer migrations in this Splice network's history.
 ### Example
 
 ```bash
- getMigrationInfo
+scan-api getMigrationInfo
 ```
 
 ### Parameters
@@ -236,7 +236,7 @@ and the new migration ID.
 ### Example
 
 ```bash
- getMigrationSchedule
+scan-api getMigrationSchedule
 ```
 
 ### Parameters
@@ -268,7 +268,7 @@ Retrieve the UI names of various elements of this Splice network.
 ### Example
 
 ```bash
- getSpliceInstanceNames
+scan-api getSpliceInstanceNames
 ```
 
 ### Parameters
@@ -298,7 +298,7 @@ No authorization required
 ### Example
 
 ```bash
- getSynchronizerBootstrappingTransactions domain_id_prefix=value
+scan-api getSynchronizerBootstrappingTransactions domain_id_prefix=value
 ```
 
 ### Parameters
@@ -331,7 +331,7 @@ No authorization required
 ### Example
 
 ```bash
- getSynchronizerIdentities domain_id_prefix=value
+scan-api getSynchronizerIdentities domain_id_prefix=value
 ```
 
 ### Parameters
@@ -367,7 +367,7 @@ faucets, and basis statistics on their round collection history
 ### Example
 
 ```bash
- getTopValidatorsByValidatorFaucets  limit=value
+scan-api getTopValidatorsByValidatorFaucets  limit=value
 ```
 
 ### Parameters
@@ -404,7 +404,7 @@ request's specification.
 ### Example
 
 ```bash
- getUpdatesBefore
+scan-api getUpdatesBefore
 ```
 
 ### Parameters
@@ -439,7 +439,7 @@ Retrieve a list of the latest amulet price votes
 ### Example
 
 ```bash
- listAmuletPriceVotes
+scan-api listAmuletPriceVotes
 ```
 
 ### Parameters
@@ -471,7 +471,7 @@ List all active 'VoteRequest'\\ s.
 ### Example
 
 ```bash
- listDsoRulesVoteRequests
+scan-api listDsoRulesVoteRequests
 ```
 
 ### Parameters
@@ -503,7 +503,7 @@ List every 'FeaturedAppRight' registered with the DSO on the ledger.
 ### Example
 
 ```bash
- listFeaturedAppRights
+scan-api listFeaturedAppRights
 ```
 
 ### Parameters
@@ -535,7 +535,7 @@ Retrieve Canton BFT sequencer configuration for this SV, for each configured Syn
 ### Example
 
 ```bash
- listSvBftSequencers
+scan-api listSvBftSequencers
 ```
 
 ### Parameters
@@ -565,7 +565,7 @@ No authorization required
 ### Example
 
 ```bash
- listVoteRequestResults
+scan-api listVoteRequestResults
 ```
 
 ### Parameters
@@ -600,7 +600,7 @@ Look up several 'VoteRequest'\\ s at once by their contract IDs.
 ### Example
 
 ```bash
- listVoteRequestsByTrackingCid
+scan-api listVoteRequestsByTrackingCid
 ```
 
 ### Parameters
@@ -635,7 +635,7 @@ Look up a 'VoteRequest' by contract ID.
 ### Example
 
 ```bash
- lookupDsoRulesVoteRequest vote_request_contract_id=value
+scan-api lookupDsoRulesVoteRequest vote_request_contract_id=value
 ```
 
 ### Parameters
@@ -671,7 +671,7 @@ return it; 'featured_app_right' will be empty otherwise.
 ### Example
 
 ```bash
- lookupFeaturedAppRight provider_party_id=value
+scan-api lookupFeaturedAppRight provider_party_id=value
 ```
 
 ### Parameters
@@ -706,7 +706,7 @@ Lookup a TransferCommandCounter by the receiver party.
 ### Example
 
 ```bash
- lookupTransferCommandCounterByParty party=value
+scan-api lookupTransferCommandCounterByParty party=value
 ```
 
 ### Parameters
@@ -741,7 +741,7 @@ Retrieve the status of all transfer commands (up to a limit of 100) of the given
 ### Example
 
 ```bash
- lookupTransferCommandStatus  sender=value  nonce=value
+scan-api lookupTransferCommandStatus  sender=value  nonce=value
 ```
 
 ### Parameters
@@ -777,7 +777,7 @@ Lookup a TransferPreapproval by the receiver party.
 ### Example
 
 ```bash
- lookupTransferPreapprovalByParty party=value
+scan-api lookupTransferPreapprovalByParty party=value
 ```
 
 ### Parameters

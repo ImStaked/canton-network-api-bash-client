@@ -1,9 +1,6 @@
-.openapi-generator-ignore
 Dockerfile
 README.md
-_client.sh
-client.sh
-client.sh.bash-completion
+_scan-proxy-api
 docs/AnsEntry.md
 docs/BaseLookupTransferCommandStatusResponse.md
 docs/Contract.md
@@ -28,3 +25,5 @@ docs/TransferCommandContractWithStatus.md
 docs/TransferCommandCreatedResponse.md
 docs/TransferCommandFailedResponse.md
 docs/TransferCommandSentResponse.md
+scan-proxy-api
+scan-proxy-api.bash-completion

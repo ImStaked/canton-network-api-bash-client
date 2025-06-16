@@ -1,4 +1,4 @@
-#compdef 
+#compdef ans-external-api
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # !
@@ -15,7 +15,7 @@
 # !
 # ! Installation:
 # !
-# ! Copy the _ file to any directory under FPATH
+# ! Copy the _ans-external-api file to any directory under FPATH
 # ! environment variable (echo $FPATH)
 # !
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -297,11 +297,8 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-            "createBuyTrafficRequest[]" \
-            "createTransferOffer[]" \
-            "getBuyTrafficRequestStatus[]" \
-            "getTransferOfferStatus[]" \
-            "listTransferOffers[]" \
+            "createAnsEntry[]" \
+            "listAnsEntries[]" \
 
     _arguments "(--help)--help[Print information about operation]"
 
@@ -309,33 +306,13 @@ case $state in
     ;;
   args)
     case $line[1] in
-      createBuyTrafficRequest)
+      createAnsEntry)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      createTransferOffer)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getBuyTrafficRequestStatus)
-        local -a _op_arguments
-        _op_arguments=(
-          "tracking_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getTransferOfferStatus)
-        local -a _op_arguments
-        _op_arguments=(
-          "tracking_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      listTransferOffers)
+      listAnsEntries)
         local -a _op_arguments
         _op_arguments=(
                               )

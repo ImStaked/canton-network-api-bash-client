@@ -65,7 +65,7 @@ Method | HTTP request | Description
 ### Example
 
 ```bash
- featureSupport
+scan-api featureSupport
 ```
 
 ### Parameters
@@ -101,7 +101,7 @@ immediate internal snapshot and delay in the next automatic snapshot.
 ### Example
 
 ```bash
- forceAcsSnapshotNow
+scan-api forceAcsSnapshotNow
 ```
 
 ### Parameters
@@ -133,7 +133,7 @@ Returns the ACS in creation date ascending order, paged, for a given migration i
 ### Example
 
 ```bash
- getAcsSnapshotAt
+scan-api getAcsSnapshotAt
 ```
 
 ### Parameters
@@ -166,7 +166,7 @@ No authorization required
 ### Example
 
 ```bash
- getAmuletRules
+scan-api getAmuletRules
 ```
 
 ### Parameters
@@ -199,7 +199,7 @@ No authorization required
 ### Example
 
 ```bash
- getAnsRules
+scan-api getAnsRules
 ```
 
 ### Parameters
@@ -234,7 +234,7 @@ Retrieve the status of the backfilling process.
 ### Example
 
 ```bash
- getBackfillingStatus
+scan-api getBackfillingStatus
 ```
 
 ### Parameters
@@ -267,7 +267,7 @@ the connected Splice network, in round number order, earliest-first.
 ### Example
 
 ```bash
- getClosedRounds
+scan-api getClosedRounds
 ```
 
 ### Parameters
@@ -300,7 +300,7 @@ This corresponds to the record time of the last transaction in the snapshot.
 ### Example
 
 ```bash
- getDateOfMostRecentSnapshotBefore  before=value  migration_id=value
+scan-api getDateOfMostRecentSnapshotBefore  before=value  migration_id=value
 ```
 
 ### Parameters
@@ -334,7 +334,7 @@ No authorization required
 ### Example
 
 ```bash
- getDsoInfo
+scan-api getDsoInfo
 ```
 
 ### Parameters
@@ -366,7 +366,7 @@ The party ID of the DSO for the Splice network connected by this Scan app.
 ### Example
 
 ```bash
- getDsoPartyId
+scan-api getDsoPartyId
 ```
 
 ### Parameters
@@ -396,7 +396,7 @@ No authorization required
 ### Example
 
 ```bash
- getExternalPartyAmuletRules
+scan-api getExternalPartyAmuletRules
 ```
 
 ### Parameters
@@ -431,7 +431,7 @@ Returns the active amulet contracts for a given migration id and record time, in
 ### Example
 
 ```bash
- getHoldingsStateAt
+scan-api getHoldingsStateAt
 ```
 
 ### Parameters
@@ -467,7 +467,7 @@ This is an aggregate of '/v0/holdings/state' by owner party ID with better perfo
 ### Example
 
 ```bash
- getHoldingsSummaryAt
+scan-api getHoldingsSummaryAt
 ```
 
 ### Parameters
@@ -500,7 +500,7 @@ No authorization required
 ### Example
 
 ```bash
- getImportUpdates
+scan-api getImportUpdates
 ```
 
 ### Parameters
@@ -536,7 +536,7 @@ ledger state at the time of the request.
 ### Example
 
 ```bash
- getMemberTrafficStatus domain_id=value member_id=value
+scan-api getMemberTrafficStatus domain_id=value member_id=value
 ```
 
 ### Parameters
@@ -573,7 +573,7 @@ List all previous synchronizer migrations in this Splice network's history.
 ### Example
 
 ```bash
- getMigrationInfo
+scan-api getMigrationInfo
 ```
 
 ### Parameters
@@ -609,7 +609,7 @@ and the new migration ID.
 ### Example
 
 ```bash
- getMigrationSchedule
+scan-api getMigrationSchedule
 ```
 
 ### Parameters
@@ -643,7 +643,7 @@ polling/client-cache-update efficiency.
 ### Example
 
 ```bash
- getOpenAndIssuingMiningRounds
+scan-api getOpenAndIssuingMiningRounds
 ```
 
 ### Parameters
@@ -680,7 +680,7 @@ synchronizer and party, which is not currently supported.
 ### Example
 
 ```bash
- getPartyToParticipant domain_id=value party_id=value
+scan-api getPartyToParticipant domain_id=value party_id=value
 ```
 
 ### Parameters
@@ -716,7 +716,7 @@ No authorization required
 ### Example
 
 ```bash
- getRewardsCollected  round=value
+scan-api getRewardsCollected  round=value
 ```
 
 ### Parameters
@@ -752,7 +752,7 @@ the ledger effective time at which the round was closed.
 ### Example
 
 ```bash
- getRoundOfLatestData
+scan-api getRoundOfLatestData
 ```
 
 ### Parameters
@@ -784,7 +784,7 @@ Retrieve the UI names of various elements of this Splice network.
 ### Example
 
 ```bash
- getSpliceInstanceNames
+scan-api getSpliceInstanceNames
 ```
 
 ### Parameters
@@ -814,7 +814,7 @@ No authorization required
 ### Example
 
 ```bash
- getSynchronizerBootstrappingTransactions domain_id_prefix=value
+scan-api getSynchronizerBootstrappingTransactions domain_id_prefix=value
 ```
 
 ### Parameters
@@ -847,7 +847,7 @@ No authorization required
 ### Example
 
 ```bash
- getSynchronizerIdentities domain_id_prefix=value
+scan-api getSynchronizerIdentities domain_id_prefix=value
 ```
 
 ### Parameters
@@ -883,7 +883,7 @@ rewards for each
 ### Example
 
 ```bash
- getTopProvidersByAppRewards  round=value  limit=value
+scan-api getTopProvidersByAppRewards  round=value  limit=value
 ```
 
 ### Parameters
@@ -920,7 +920,7 @@ amount of extra traffic purchased
 ### Example
 
 ```bash
- getTopValidatorsByPurchasedTraffic  round=value  limit=value
+scan-api getTopValidatorsByPurchasedTraffic  round=value  limit=value
 ```
 
 ### Parameters
@@ -957,7 +957,7 @@ faucets, and basis statistics on their round collection history
 ### Example
 
 ```bash
- getTopValidatorsByValidatorFaucets  limit=value
+scan-api getTopValidatorsByValidatorFaucets  limit=value
 ```
 
 ### Parameters
@@ -994,7 +994,7 @@ rewards for each
 ### Example
 
 ```bash
- getTopValidatorsByValidatorRewards  round=value  limit=value
+scan-api getTopValidatorsByValidatorRewards  round=value  limit=value
 ```
 
 ### Parameters
@@ -1030,7 +1030,7 @@ No authorization required
 ### Example
 
 ```bash
- getTotalAmuletBalance  asOfEndOfRound=value
+scan-api getTotalAmuletBalance  asOfEndOfRound=value
 ```
 
 ### Parameters
@@ -1069,7 +1069,7 @@ order of events in the transaction, for this you should rely on the order of 'ro
 ### Example
 
 ```bash
- getUpdateByIdV2 update_id=value  daml_value_encoding=value
+scan-api getUpdateByIdV2 update_id=value  daml_value_encoding=value
 ```
 
 ### Parameters
@@ -1114,7 +1114,7 @@ and there may be two updates with the same record time but different migration i
 ### Example
 
 ```bash
- getUpdateHistoryV2
+scan-api getUpdateHistoryV2
 ```
 
 ### Parameters
@@ -1150,7 +1150,7 @@ request's specification.
 ### Example
 
 ```bash
- getUpdatesBefore
+scan-api getUpdatesBefore
 ```
 
 ### Parameters
@@ -1187,7 +1187,7 @@ time of the request.
 ### Example
 
 ```bash
- getValidatorFaucetsByValidator  Specify as:  validator_ids=value1 validator_ids=value2 validator_ids=...
+scan-api getValidatorFaucetsByValidator  Specify as:  validator_ids=value1 validator_ids=value2 validator_ids=...
 ```
 
 ### Parameters
@@ -1223,7 +1223,7 @@ No authorization required
 ### Example
 
 ```bash
- listActivity
+scan-api listActivity
 ```
 
 ### Parameters
@@ -1258,7 +1258,7 @@ Retrieve a list of the latest amulet price votes
 ### Example
 
 ```bash
- listAmuletPriceVotes
+scan-api listAmuletPriceVotes
 ```
 
 ### Parameters
@@ -1291,7 +1291,7 @@ Lists all non-expired ANS entries whose names are prefixed with the
 ### Example
 
 ```bash
- listAnsEntries  page_size=value  name_prefix=value
+scan-api listAnsEntries  page_size=value  name_prefix=value
 ```
 
 ### Parameters
@@ -1330,7 +1330,7 @@ List all active 'VoteRequest'\\ s.
 ### Example
 
 ```bash
- listDsoRulesVoteRequests
+scan-api listDsoRulesVoteRequests
 ```
 
 ### Parameters
@@ -1363,7 +1363,7 @@ connected synchronizer ID
 ### Example
 
 ```bash
- listDsoScans
+scan-api listDsoScans
 ```
 
 ### Parameters
@@ -1396,7 +1396,7 @@ connected synchronizer ID
 ### Example
 
 ```bash
- listDsoSequencers
+scan-api listDsoSequencers
 ```
 
 ### Parameters
@@ -1428,7 +1428,7 @@ List every 'FeaturedAppRight' registered with the DSO on the ledger.
 ### Example
 
 ```bash
- listFeaturedAppRights
+scan-api listFeaturedAppRights
 ```
 
 ### Parameters
@@ -1460,7 +1460,7 @@ Retrieve Canton BFT sequencer configuration for this SV, for each configured Syn
 ### Example
 
 ```bash
- listSvBftSequencers
+scan-api listSvBftSequencers
 ```
 
 ### Parameters
@@ -1493,7 +1493,7 @@ sorted newest-first.
 ### Example
 
 ```bash
- listValidatorLicenses  after=value  limit=value
+scan-api listValidatorLicenses  after=value  limit=value
 ```
 
 ### Parameters
@@ -1527,7 +1527,7 @@ No authorization required
 ### Example
 
 ```bash
- listVoteRequestResults
+scan-api listVoteRequestResults
 ```
 
 ### Parameters
@@ -1562,7 +1562,7 @@ Look up several 'VoteRequest'\\ s at once by their contract IDs.
 ### Example
 
 ```bash
- listVoteRequestsByTrackingCid
+scan-api listVoteRequestsByTrackingCid
 ```
 
 ### Parameters
@@ -1597,7 +1597,7 @@ If present, the ANS entry named exactly 'name'.
 ### Example
 
 ```bash
- lookupAnsEntryByName name=value
+scan-api lookupAnsEntryByName name=value
 ```
 
 ### Parameters
@@ -1633,7 +1633,7 @@ If present, the first ANS entry for user 'party' according to
 ### Example
 
 ```bash
- lookupAnsEntryByParty party=value
+scan-api lookupAnsEntryByParty party=value
 ```
 
 ### Parameters
@@ -1668,7 +1668,7 @@ Look up a 'VoteRequest' by contract ID.
 ### Example
 
 ```bash
- lookupDsoRulesVoteRequest vote_request_contract_id=value
+scan-api lookupDsoRulesVoteRequest vote_request_contract_id=value
 ```
 
 ### Parameters
@@ -1704,7 +1704,7 @@ return it; 'featured_app_right' will be empty otherwise.
 ### Example
 
 ```bash
- lookupFeaturedAppRight provider_party_id=value
+scan-api lookupFeaturedAppRight provider_party_id=value
 ```
 
 ### Parameters
@@ -1739,7 +1739,7 @@ Lookup a TransferCommandCounter by the receiver party.
 ### Example
 
 ```bash
- lookupTransferCommandCounterByParty party=value
+scan-api lookupTransferCommandCounterByParty party=value
 ```
 
 ### Parameters
@@ -1774,7 +1774,7 @@ Retrieve the status of all transfer commands (up to a limit of 100) of the given
 ### Example
 
 ```bash
- lookupTransferCommandStatus  sender=value  nonce=value
+scan-api lookupTransferCommandStatus  sender=value  nonce=value
 ```
 
 ### Parameters
@@ -1810,7 +1810,7 @@ Lookup a TransferPreapproval by the receiver party.
 ### Example
 
 ```bash
- lookupTransferPreapprovalByParty party=value
+scan-api lookupTransferPreapprovalByParty party=value
 ```
 
 ### Parameters

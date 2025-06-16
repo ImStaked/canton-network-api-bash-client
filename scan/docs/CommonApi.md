@@ -18,7 +18,7 @@ Method | HTTP request | Description
 ### Example
 
 ```bash
- getHealthStatus
+scan-api getHealthStatus
 ```
 
 ### Parameters
@@ -48,7 +48,7 @@ No authorization required
 ### Example
 
 ```bash
- getVersion
+scan-api getVersion
 ```
 
 ### Parameters
@@ -78,7 +78,7 @@ No authorization required
 ### Example
 
 ```bash
- isLive
+scan-api isLive
 ```
 
 ### Parameters
@@ -108,7 +108,7 @@ No authorization required
 ### Example
 
 ```bash
- isReady
+scan-api isReady
 ```
 
 ### Parameters

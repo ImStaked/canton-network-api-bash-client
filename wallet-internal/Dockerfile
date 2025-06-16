@@ -2,10 +2,10 @@ FROM alpine:3.12.0
 
 RUN apk add --update --no-cache curl ca-certificates bash bash-completion zsh curl git vim ncurses util-linux
 
-ADD internal-wallet-api.sh /usr/bin/internal-wallet-api.sh
-ADD _internal-wallet-api.sh /usr/local/share/zsh/site-functions/_internal-wallet-api.sh
-ADD internal-wallet-api.sh.bash-completion /etc/bash-completion.d/internal-wallet-api.sh
-RUN chmod 755 /usr/bin/internal-wallet-api.sh
+ADD wallet-internal-api /usr/bin/wallet-internal-api
+ADD _wallet-internal-api /usr/local/share/zsh/site-functions/_wallet-internal-api
+ADD wallet-internal-api.bash-completion /etc/bash-completion.d/wallet-internal-api
+RUN chmod 755 /usr/bin/wallet-internal-api
 
 #
 # Install oh-my-zsh
@@ -17,7 +17,7 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh
 #
 RUN echo '\n\
 . /etc/bash_completion\n\
-source /etc/bash-completion.d/internal-wallet-api.sh\n\
+source /etc/bash-completion.d/wallet-internal-api\n\
 ' >> ~/.bashrc
 
 #
@@ -41,13 +41,13 @@ For convenience, you can export the following environment variables:\n\
 $(tput setaf 7)Basic usage:$(tput sgr0)\n\
 \n\
 $(tput setaf 3)Print the list of operations available on the service$(tput sgr0)\n\
-$ internal-wallet-api.sh -h\n\
+$ wallet-internal-api -h\n\
 \n\
 $(tput setaf 3)Print the service description$(tput sgr0)\n\
-$ internal-wallet-api.sh --about\n\
+$ wallet-internal-api --about\n\
 \n\
 $(tput setaf 3)Print detailed information about specific operation$(tput sgr0)\n\
-$ internal-wallet-api.sh <operationId> -h\n\
+$ wallet-internal-api <operationId> -h\n\
 \n\
 By default you are logged into Zsh with full autocompletion for your REST API,\n\
 but you can switch to Bash, where basic autocompletion is also supported.\n\

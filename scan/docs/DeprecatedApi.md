@@ -34,7 +34,7 @@ Method | HTTP request | Description
 ### Example
 
 ```bash
- getAcsSnapshot party=value  record_time=value
+scan-api getAcsSnapshot party=value  record_time=value
 ```
 
 ### Parameters
@@ -70,7 +70,7 @@ No authorization required
 ### Example
 
 ```bash
- getAggregatedRounds
+scan-api getAggregatedRounds
 ```
 
 ### Parameters
@@ -102,7 +102,7 @@ No authorization required
 ### Example
 
 ```bash
- getAmuletConfigForRound  round=value
+scan-api getAmuletConfigForRound  round=value
 ```
 
 ### Parameters
@@ -137,7 +137,7 @@ No authorization required
 ### Example
 
 ```bash
- getRewardsCollected  round=value
+scan-api getRewardsCollected  round=value
 ```
 
 ### Parameters
@@ -173,7 +173,7 @@ the ledger effective time at which the round was closed.
 ### Example
 
 ```bash
- getRoundOfLatestData
+scan-api getRoundOfLatestData
 ```
 
 ### Parameters
@@ -206,7 +206,7 @@ rewards for each
 ### Example
 
 ```bash
- getTopProvidersByAppRewards  round=value  limit=value
+scan-api getTopProvidersByAppRewards  round=value  limit=value
 ```
 
 ### Parameters
@@ -243,7 +243,7 @@ amount of extra traffic purchased
 ### Example
 
 ```bash
- getTopValidatorsByPurchasedTraffic  round=value  limit=value
+scan-api getTopValidatorsByPurchasedTraffic  round=value  limit=value
 ```
 
 ### Parameters
@@ -280,7 +280,7 @@ rewards for each
 ### Example
 
 ```bash
- getTopValidatorsByValidatorRewards  round=value  limit=value
+scan-api getTopValidatorsByValidatorRewards  round=value  limit=value
 ```
 
 ### Parameters
@@ -316,7 +316,7 @@ No authorization required
 ### Example
 
 ```bash
- getTotalAmuletBalance  asOfEndOfRound=value
+scan-api getTotalAmuletBalance  asOfEndOfRound=value
 ```
 
 ### Parameters
@@ -351,7 +351,7 @@ No authorization required
 ### Example
 
 ```bash
- getUpdateById update_id=value  lossless=value
+scan-api getUpdateById update_id=value  lossless=value
 ```
 
 ### Parameters
@@ -392,7 +392,7 @@ The order of items in events_by_id is not defined.
 ### Example
 
 ```bash
- getUpdateByIdV1 update_id=value  daml_value_encoding=value
+scan-api getUpdateByIdV1 update_id=value  daml_value_encoding=value
 ```
 
 ### Parameters
@@ -429,7 +429,7 @@ Returns the update history in ascending order, paged, from ledger begin or optio
 ### Example
 
 ```bash
- getUpdateHistory
+scan-api getUpdateHistory
 ```
 
 ### Parameters
@@ -473,7 +473,7 @@ The order of items in events_by_id is not defined.
 ### Example
 
 ```bash
- getUpdateHistoryV1
+scan-api getUpdateHistoryV1
 ```
 
 ### Parameters
@@ -508,7 +508,7 @@ No authorization required
 ### Example
 
 ```bash
- getWalletBalance  party_id=value  asOfEndOfRound=value
+scan-api getWalletBalance  party_id=value  asOfEndOfRound=value
 ```
 
 ### Parameters
@@ -544,7 +544,7 @@ No authorization required
 ### Example
 
 ```bash
- listActivity
+scan-api listActivity
 ```
 
 ### Parameters
@@ -579,7 +579,7 @@ No authorization required
 ### Example
 
 ```bash
- listRoundPartyTotals
+scan-api listRoundPartyTotals
 ```
 
 ### Parameters
@@ -614,7 +614,7 @@ No authorization required
 ### Example
 
 ```bash
- listRoundTotals
+scan-api listRoundTotals
 ```
 
 ### Parameters
@@ -649,7 +649,7 @@ No authorization required
 ### Example
 
 ```bash
- listTransactionHistory
+scan-api listTransactionHistory
 ```
 
 ### Parameters

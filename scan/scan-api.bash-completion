@@ -1,4 +1,4 @@
-#  completion                               -*- shell-script -*-
+# scan-api completion                               -*- shell-script -*-
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # !
@@ -13,12 +13,12 @@
 # !
 # ! System wide installation:
 # !
-# ! $ sudo cp .bash-completion /etc/bash-completion.d/
+# ! $ sudo cp scan-api.bash-completion /etc/bash-completion.d/scan-api
 # !
 # !
 # ! User home installation (add this line to .bash_profile):
 # !
-# ! [ -r ~/.bash-completion ] && source ~/.bash-completion
+# ! [ -r ~/scan-api.bash-completion ] && source ~/scan-api.bash-completion
 # !
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -56,7 +56,7 @@ if [[ `uname` =~ "Darwin" ]]; then
     }
 fi
 
-_()
+_scan-api()
 {
     local cur
     local prev
@@ -444,7 +444,7 @@ _()
     fi
 
     #
-    # Complete the  and cURL's arguments
+    # Complete the scan-api and cURL's arguments
     #
     if [[ $cur == -* ]]; then
         COMPREPLY=( $( compgen -W '$(_parse_help curl) $(_parse_help $1)' -- "$cur" ) )
@@ -470,6 +470,6 @@ _()
     fi
 
 } &&
-complete -F _ 
+complete -F _scan-api scan-api
 
 # ex: ts=4 sw=4 et filetype=sh

@@ -1,9 +1,7 @@
 .openapi-generator-ignore
 Dockerfile
 README.md
-_client.sh
-client.sh
-client.sh.bash-completion
+_scan-api
 docs/AbortTransferInstruction.md
 docs/AcsRequest.md
 docs/AcsResponse.md
@@ -143,3 +141,5 @@ docs/UpdateHistoryUnassignment.md
 docs/ValidatorPurchasedTraffic.md
 docs/ValidatorReceivedFaucets.md
 docs/Version.md
+scan-api
+scan-api.bash-completion
