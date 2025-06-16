@@ -69,7 +69,6 @@ The generated bash-completion script can be either directly loaded to the curren
 
 ```shell
 source ans-external-api.bash-completion
-ln ans-external-api -t /usr/local/bin/
 ```
 
 Alternatively, the script can be copied to the `/etc/bash-completion.d` (or on OSX with Homebrew to `/usr/local/etc/bash-completion.d`):

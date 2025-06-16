@@ -69,7 +69,6 @@ The generated bash-completion script can be either directly loaded to the curren
 
 ```shell
 source validator-internal-api.bash-completion
-ln validator-internal-api -t /usr/local/bin/
 ```
 
 Alternatively, the script can be copied to the `/etc/bash-completion.d` (or on OSX with Homebrew to `/usr/local/etc/bash-completion.d`):
