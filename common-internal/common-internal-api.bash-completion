@@ -1,4 +1,4 @@
-#  completion                               -*- shell-script -*-
+# common-internal-api completion                               -*- shell-script -*-
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # !
@@ -13,12 +13,12 @@
 # !
 # ! System wide installation:
 # !
-# ! $ sudo cp .bash-completion /etc/bash-completion.d/
+# ! $ sudo cp common-internal-api.bash-completion /etc/bash-completion.d/common-internal-api
 # !
 # !
 # ! User home installation (add this line to .bash_profile):
 # !
-# ! [ -r ~/.bash-completion ] && source ~/.bash-completion
+# ! [ -r ~/common-internal-api.bash-completion ] && source ~/common-internal-api.bash-completion
 # !
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -56,7 +56,7 @@ if [[ `uname` =~ "Darwin" ]]; then
     }
 fi
 
-_()
+_common-internal-api()
 {
     local cur
     local prev
@@ -69,60 +69,13 @@ _()
     # The list of available operation in the REST service
     # It's modelled as an associative array for efficient key lookup
     declare -A operations
-    operations["isLive"]=1
-    operations["isReady"]=1
-    operations["cancelTransferPreapprovalByParty"]=1
-    operations["createExternalPartySetupProposal"]=1
-    operations["dumpParticipantIdentities"]=1
-    operations["generateExternalPartyTopology"]=1
-    operations["getDecentralizedSynchronizerConnectionConfig"]=1
-    operations["getExternalPartyBalance"]=1
-    operations["getValidatorDomainDataSnapshot"]=1
-    operations["listExternalPartySetupProposals"]=1
-    operations["listTransferPreapprovals"]=1
-    operations["listUsers"]=1
-    operations["lookupTransferPreapprovalByParty"]=1
-    operations["offboardUser"]=1
-    operations["onboardUser"]=1
-    operations["prepareAcceptExternalPartySetupProposal"]=1
-    operations["prepareTransferPreapprovalSend"]=1
-    operations["register"]=1
-    operations["submitAcceptExternalPartySetupProposal"]=1
-    operations["submitExternalPartyTopology"]=1
-    operations["submitTransferPreapprovalSend"]=1
-    operations["getValidatorUserInfo"]=1
 
     # An associative array of operations to their parameters
     # Only include path, query and header parameters
     declare -A operation_parameters
-    operation_parameters["isLive"]=""
-    operation_parameters["isReady"]=""
-    operation_parameters["cancelTransferPreapprovalByParty"]="receiver-party= "
-    operation_parameters["createExternalPartySetupProposal"]=""
-    operation_parameters["dumpParticipantIdentities"]=""
-    operation_parameters["generateExternalPartyTopology"]=""
-    operation_parameters["getDecentralizedSynchronizerConnectionConfig"]=""
-    operation_parameters["getExternalPartyBalance"]="party_id= "
-    operation_parameters["getValidatorDomainDataSnapshot"]="timestamp= migration_id= force= "
-    operation_parameters["listExternalPartySetupProposals"]=""
-    operation_parameters["listTransferPreapprovals"]=""
-    operation_parameters["listUsers"]=""
-    operation_parameters["lookupTransferPreapprovalByParty"]="receiver-party= "
-    operation_parameters["offboardUser"]="username= "
-    operation_parameters["onboardUser"]=""
-    operation_parameters["prepareAcceptExternalPartySetupProposal"]=""
-    operation_parameters["prepareTransferPreapprovalSend"]=""
-    operation_parameters["register"]=""
-    operation_parameters["submitAcceptExternalPartySetupProposal"]=""
-    operation_parameters["submitExternalPartyTopology"]=""
-    operation_parameters["submitTransferPreapprovalSend"]=""
-    operation_parameters["getValidatorUserInfo"]=""
 
     # An associative array of possible values for enum parameters
     declare -A operation_parameters_enum_values
-    operation_parameters_enum_values["getValidatorDomainDataSnapshot::force"]="true false"
-    operation_parameters_enum_values["getValidatorDomainDataSnapshot::force"]="true false"
-    operation_parameters_enum_values["getValidatorDomainDataSnapshot::force"]="true false"
 
     #
     # Check if this is OSX and use special __osx_init_completion function
@@ -257,7 +210,7 @@ _()
     fi
 
     #
-    # Complete the  and cURL's arguments
+    # Complete the common-internal-api and cURL's arguments
     #
     if [[ $cur == -* ]]; then
         COMPREPLY=( $( compgen -W '$(_parse_help curl) $(_parse_help $1)' -- "$cur" ) )
@@ -283,6 +236,6 @@ _()
     fi
 
 } &&
-complete -F _ 
+complete -F _common-internal-api common-internal-api
 
 # ex: ts=4 sw=4 et filetype=sh

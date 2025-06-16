@@ -1,8 +1,8 @@
 Dockerfile
 README.md
-_client.sh
-client.sh
-client.sh.bash-completion
+_common-external-api
+common-external-api
+common-external-api.bash-completion
 docs/CommonApi.md
 docs/Contract.md
 docs/ErrorResponse.md

@@ -18,7 +18,7 @@ Method | HTTP request | Description
 ### Example
 
 ```bash
- getHealthStatus
+common-external-api getHealthStatus
 ```
 
 ### Parameters
@@ -48,7 +48,7 @@ No authorization required
 ### Example
 
 ```bash
- getVersion
+common-external-api getVersion
 ```
 
 ### Parameters
@@ -78,7 +78,7 @@ No authorization required
 ### Example
 
 ```bash
- isLive
+common-external-api isLive
 ```
 
 ### Parameters
@@ -108,7 +108,7 @@ No authorization required
 ### Example
 
 ```bash
- isReady
+common-external-api isReady
 ```
 
 ### Parameters

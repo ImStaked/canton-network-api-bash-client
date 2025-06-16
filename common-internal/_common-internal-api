@@ -1,4 +1,4 @@
-#compdef 
+#compdef common-internal-api
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # !
@@ -15,7 +15,7 @@
 # !
 # ! Installation:
 # !
-# ! Copy the _ file to any directory under FPATH
+# ! Copy the _common-internal-api file to any directory under FPATH
 # ! environment variable (echo $FPATH)
 # !
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -297,10 +297,7 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-            "getHealthStatus[]" \
-            "getVersion[]" \
-            "isLive[]" \
-            "isReady[]" \
+\
 
     _arguments "(--help)--help[Print information about operation]"
 
@@ -308,30 +305,6 @@ case $state in
     ;;
   args)
     case $line[1] in
-      getHealthStatus)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getVersion)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      isLive)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      isReady)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
     esac
     ;;
 

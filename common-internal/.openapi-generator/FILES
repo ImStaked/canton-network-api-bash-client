@@ -1,8 +1,8 @@
 Dockerfile
 README.md
-_client.sh
-client.sh
-client.sh.bash-completion
+_common-internal-api
+common-internal-api
+common-internal-api.bash-completion
 docs/AssignedContract.md
 docs/BatchListVotesByVoteRequestsRequest.md
 docs/Contract.md

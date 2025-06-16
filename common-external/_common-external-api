@@ -1,4 +1,4 @@
-#compdef 
+#compdef common-external-api
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # !
@@ -15,7 +15,7 @@
 # !
 # ! Installation:
 # !
-# ! Copy the _ file to any directory under FPATH
+# ! Copy the _common-external-api file to any directory under FPATH
 # ! environment variable (echo $FPATH)
 # !
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -297,26 +297,10 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
+            "getHealthStatus[]" \
+            "getVersion[]" \
             "isLive[]" \
-            "isReady[]"             "cancelTransferPreapprovalByParty[]" \
-            "createExternalPartySetupProposal[]" \
-            "dumpParticipantIdentities[]" \
-            "generateExternalPartyTopology[]" \
-            "getDecentralizedSynchronizerConnectionConfig[]" \
-            "getExternalPartyBalance[]" \
-            "getValidatorDomainDataSnapshot[]" \
-            "listExternalPartySetupProposals[]" \
-            "listTransferPreapprovals[]" \
-            "listUsers[]" \
-            "lookupTransferPreapprovalByParty[]" \
-            "offboardUser[]" \
-            "onboardUser[]" \
-            "prepareAcceptExternalPartySetupProposal[]" \
-            "prepareTransferPreapprovalSend[]" \
-            "register[]" \
-            "submitAcceptExternalPartySetupProposal[]" \
-            "submitExternalPartyTopology[]" \
-            "submitTransferPreapprovalSend[]"             "getValidatorUserInfo[]" \
+            "isReady[]" \
 
     _arguments "(--help)--help[Print information about operation]"
 
@@ -324,6 +308,18 @@ case $state in
     ;;
   args)
     case $line[1] in
+      getHealthStatus)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getVersion)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       isLive)
         local -a _op_arguments
         _op_arguments=(
@@ -331,141 +327,6 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       isReady)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      cancelTransferPreapprovalByParty)
-        local -a _op_arguments
-        _op_arguments=(
-          "receiver-party=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      createExternalPartySetupProposal)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dumpParticipantIdentities)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      generateExternalPartyTopology)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getDecentralizedSynchronizerConnectionConfig)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getExternalPartyBalance)
-        local -a _op_arguments
-        _op_arguments=(
-                    "party_id=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getValidatorDomainDataSnapshot)
-        local -a _op_arguments
-        _op_arguments=(
-                    "timestamp=:[QUERY] The timestamp as of which the dump (in particular, the ACS) is valid.
-
-Must in the ISO-8601 format in UTC timezone, e.g.,
-&#39;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;&#39;."
-"migration_id=:[QUERY] The current migration id."
-"force=true:[QUERY] If true, do not check whether the provided timestamp is clean.
-Not recommended for production,
-see the &#39;ExportAcs&#39; endpoint of the &#39;ParticipantRepairService&#39; participant gRPC API."
-          "force=false:[QUERY] If true, do not check whether the provided timestamp is clean.
-Not recommended for production,
-see the &#39;ExportAcs&#39; endpoint of the &#39;ParticipantRepairService&#39; participant gRPC API."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      listExternalPartySetupProposals)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      listTransferPreapprovals)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      listUsers)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      lookupTransferPreapprovalByParty)
-        local -a _op_arguments
-        _op_arguments=(
-          "receiver-party=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      offboardUser)
-        local -a _op_arguments
-        _op_arguments=(
-                    "username=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      onboardUser)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      prepareAcceptExternalPartySetupProposal)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      prepareTransferPreapprovalSend)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      register)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      submitAcceptExternalPartySetupProposal)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      submitExternalPartyTopology)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      submitTransferPreapprovalSend)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getValidatorUserInfo)
         local -a _op_arguments
         _op_arguments=(
                               )
