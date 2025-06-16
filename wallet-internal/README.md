@@ -10,25 +10,25 @@ The script uses cURL underneath for making all REST calls.
 
 ```shell
 # Make sure the script has executable rights
-$ chmod u+x 
+chmod u+x ./internal-wallet-api.sh
 
 # Print the list of operations available on the service
-$ ./ -h
+./internal-wallet-api.shinternal-wallet-api.sh -h
 
 # Print the service description
-$ ./ --about
+./internal-wallet-api.shinternal-wallet-api.sh --about
 
 # Print detailed information about specific operation
-$ ./ <operationId> -h
+./internal-wallet-api.shinternal-wallet-api.sh <operationId> -h
 
 # Make GET request
-./ --host http://<hostname>:<port> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
+./internal-wallet-api.sh --host http://<hostname>:<port> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
 
 # Make GET request using arbitrary curl options (must be passed before <operationId>) to an SSL service using username:password
- -k -sS --tlsv1.2 --host https://<hostname> -u <user>:<password> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
+./internal-wallet-api.sh -k -sS --tlsv1.2 --host https://<hostname> -u <user>:<password> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
 
 # Make POST request
-$ echo '<body_content>' |  --host <hostname> --content-type json <operationId> -
+echo '<body_content>' | ./internal-wallet-api.sh --host <hostname> --content-type json <operationId> -
 
 # Make POST request with simple JSON content, e.g.:
 # {
@@ -36,13 +36,13 @@ $ echo '<body_content>' |  --host <hostname> --content-type json <operationId> -
 #   "key2": "value2",
 #   "key3": 23
 # }
-$ echo '<body_content>' |  --host <hostname> --content-type json <operationId> key1==value1 key2=value2 key3:=23 -
+echo '<body_content>' | ./internal-wallet-api.sh --host <hostname> --content-type json <operationId> key1==value1 key2=value2 key3:=23 -
 
 # Make POST request with form data
-$  --host <hostname> <operationId> key1:=value1 key2:=value2 key3:=23
+./internal-wallet-api.sh --host <hostname> <operationId> key1:=value1 key2:=value2 key3:=23
 
 # Preview the cURL command without actually executing it
-$  --host http://<hostname>:<port> --dry-run <operationid>
+./internal-wallet-api.sh --host http://<hostname>:<port> --dry-run <operationid>
 
 ```
 
